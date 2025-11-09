@@ -1,48 +1,110 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Awaken Abundance ✨</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Midas Awakening ✨</title>
+  <meta name="description" content="Discover the Midas Manifestation System — where ancient wisdom meets modern science to unlock true abundance.">
   <style>
+    /* ---------- Variables ---------- */
+    :root {
+      --overlay-color: rgba(0,0,0,0.55);   /* dark veil for contrast */
+      --gold: #ffd54d;
+      --gold-glow: 0 0 20px rgba(255,213,77,0.6),
+                   0 0 40px rgba(255,213,77,0.4),
+                   0 0 60px rgba(255,213,77,0.2);
+      --text-light: #fff;
+      --text-muted: #e2e8f0;
+      --card-bg: rgba(0,0,0,0.45);
+    }
+
+    html,body {height:100%;margin:0;padding:0;}
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: white;
-      text-align: center;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      color: var(--text-light);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background-image:
+        linear-gradient(var(--overlay-color), var(--overlay-color)),
+        url('images/bg-landing.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      overflow:hidden;
+      padding: 20px;
     }
+
+    /* ---------- Container ---------- */
     .card {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 2rem;
-      border-radius: 1rem;
-      max-width: 420px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+      padding: 32px 24px;
+      max-width: 640px;
+      width:100%;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+      animation: fadeIn 1.8s ease forwards;
     }
-    h1 { margin-bottom: 1rem; }
-    p { margin-bottom: 1.5rem; }
+
+    @keyframes fadeIn {
+      from {opacity:0;transform:translateY(20px);}
+      to {opacity:1;transform:translateY(0);}
+    }
+
+    h1 {
+      margin:0 0 14px;
+      font-size:2rem;
+      letter-spacing:-0.5px;
+      color:var(--gold);
+      text-shadow: var(--gold-glow);
+    }
+
+    p {
+      color:var(--text-muted);
+      margin-bottom:24px;
+      line-height:1.6;
+      font-size:1.05rem;
+    }
+
+    /* ---------- CTA Button ---------- */
     a.button {
-      display: inline-block;
-      padding: 0.9rem 1.2rem;
-      border-radius: 8px;
-      background: #ffd54d;
-      font-weight: bold;
-      text-decoration: none;
-      color: black;
-      transition: background 0.3s;
+      display:inline-block;
+      padding:14px 28px;
+      border-radius:12px;
+      background: linear-gradient(135deg, #ffeb99 0%, #ffd54d 40%, #ffcc00 100%);
+      color:#000;
+      font-weight:700;
+      font-size:1.05rem;
+      text-decoration:none;
+      box-shadow: var(--gold-glow);
+      transition: transform .15s ease, box-shadow .25s ease;
     }
-    a.button:hover { background: #ffcd1a; }
+
+    a.button:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 0 25px rgba(255,215,0,0.9),
+                  0 0 50px rgba(255,215,0,0.4);
+    }
+
+    footer {
+      margin-top:20px;
+      font-size:0.9rem;
+      color:#cbd5e1;
+      opacity:0.9;
+    }
+
+    @media(max-width:480px){
+      .card{padding:24px 18px;}
+      h1{font-size:1.6rem;}
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>✨ Your Path to Abundance Awaits ✨</h1>
-    <p>Discover the hidden wealth code and align with prosperity today.</p>
-    <a href="https://www.digistore24.com/redir/439776/Milliondollarsecretsdaily/" class="button">Unlock Now 🔑</a>
-  </div>
-</body>
-</html>
+    <h1>✨ Unlock the Midas Code ✨</h1>
+    <p>Where ancient esoteric
