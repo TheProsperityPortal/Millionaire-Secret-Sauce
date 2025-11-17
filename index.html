@@ -12,7 +12,7 @@
       --text-light: #ffffff;
       --text-muted: #e2e8f0;
       --card-bg: rgba(0, 0, 0, 0.45);
-      /* New colors for the warning */
+      /* Variables for the new warning box */
       --warning-bg: #FF0000;
       --warning-border: #FFFF00;
     }
@@ -66,6 +66,102 @@
     }
 
     p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+    
+    /* --- NEW WARNING STYLING --- */
+    #tiktok-warning {
+        background-color: var(--warning-bg); /* Bright Red */
+        color: #FFFFFF;
+        padding: 15px;
+        margin-bottom: 30px; /* Space above CTA */
+        margin-top: -10px; /* Pulls it up slightly, balancing the margin-bottom from the <p> tag */
+        border-radius: 10px;
+        border: 3px solid var(--warning-border); /* Yellow Border */
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.1em;
+        line-height: 1.4;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
+
+    /* --- CTA BUTTON --- */
+    .cta-button {
+      display: inline-block;
+      padding: 16px 34px;
+      background: #000000;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-decoration: none;
+      border-radius: 14px;
+      border: 2px solid var(--gold);
+      box-shadow:
+        0 0 15px rgba(255, 215, 0, 0.6),
+        0 0 35px rgba(255, 215, 0, 0.3);
+      animation: float 3s ease-in-out infinite;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .cta-button:hover {
+      transform: scale(1.06);
+      box-shadow:
+        0 0 25px rgba(255, 215, 0, 0.9),
+        0 0 60px rgba(255, 215, 0, 0.4);
+      background: #111;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #ccc;
+      opacity: 0.85;
+    }
+
+    @media(max-width:480px) {
+      h1 { font-size: 1.7rem; }
+      .cta-button { font-size: 1rem; padding: 14px 24px; }
+      #tiktok-warning { font-size: 1em; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>✨ Unlock the Midas Code ✨</h1>
+    <p>Ancient wisdom fused with modern science — awaken your hidden power and align with limitless wealth and freedom.</p>
+
+    <div id="tiktok-warning">
+        🚨 **STOP! LINK ACTIVATION FAILURE?** 🚨
+        <br>
+        If the next page fails to open, you must exit the TikTok browser.
+        <br>
+        Hit the **THREE DOTS (...)** in the bottom right corner
+        <br>
+        and select **"OPEN IN BROWSER"** (Chrome / Safari).
+        <br>
+        **THEN** click 'ACTIVATE NOW' again.
+    </div>
+
+    <a href="https://www.digistore24.com/redir/439776/Milliondollarsecretsdaily/"
+       class="cta-button"
+       target="_blank"
+       rel="noopener noreferrer">
+       Activate Now 🔑
+    </a>
+
+    <footer>Abundance responds to aligned action — this is your sign.</footer>
+  </div>
+</body>
+</html>
       font-size: 1.05rem;
       line-height: 1.5;
       color: var(--text-muted);
